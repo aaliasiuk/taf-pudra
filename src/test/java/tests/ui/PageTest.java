@@ -7,7 +7,7 @@ import pages.Page;
 public class PageTest extends BaseTest {
     @Test
     public void testLoginWithInvalidCreds() {
-        Page page = new Page(driver);
+        Page page = new Page();
         page.getUrl().clickLoginLink().keyEmail("email@test.com").keyPassword("invalidpassword").clickEnterButton();
         Assert.assertEquals(page.getErrorMessage(), page.errorMessage);
     }

@@ -55,7 +55,7 @@ public class Page {
         return errorMessageText;
     }
 
-    public Page(WebDriver driver) {
-        this.driver = driver;
+    public Page() {
+        this.driver = DriverSingleton.getDriver();
     }
 }
